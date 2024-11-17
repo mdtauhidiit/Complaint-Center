@@ -1,5 +1,6 @@
 const mongoose= require('mongoose');
 const Complaint = require('./modals/Complaint');
+const uri = process.env.MONGO_URL;
 const ConnectToMongo= async (uri)=>{
   await mongoose.connect(uri,async ()=>{
         console.log("Connected")
