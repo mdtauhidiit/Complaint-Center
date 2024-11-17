@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:5000/auth/signup",
+        "https://complaint-center-backend.onrender.com/auth/signup",
         { name: cred.name, email: cred.email, password: cred.password },
         {
           headers: {

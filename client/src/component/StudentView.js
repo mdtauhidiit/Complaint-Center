@@ -13,7 +13,7 @@ const ViewComplait = () => {
       navigate("/adminviewComplaints");
 
     axios
-      .get("http://localhost:5000/complaint/complains", {
+      .get("https://complaint-center-backend.onrender.com/complaint/complains", {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),

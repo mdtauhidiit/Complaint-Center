@@ -29,7 +29,7 @@ const RaiseComplaint = () => {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:5000/complaint/addComplaint",
+        "https://complaint-center-backend.onrender.com/complaint/addComplaint",
         {
           type: cred.type,
           status: cred.status,

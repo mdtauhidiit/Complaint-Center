@@ -14,7 +14,7 @@ const Adminview = () => {
     if (localStorage.getItem("role") === "student") navigate("/viewComplaints");
 
     axios
-      .get("http://localhost:5000/complaint/complains", {
+      .get("https://complaint-center-backend.onrender.com/complaint/complains", {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),

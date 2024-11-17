@@ -10,7 +10,7 @@ const ViewComplaint = (props) => {
     if (!localStorage.getItem("authToken")) navigate("/login");
 
     axios
-      .get(`http://localhost:5000/complaint/complain/${id}`, {
+      .get(`https://complaint-center-backend.onrender.com/complaint/complain/${id}`, {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),
@@ -30,7 +30,7 @@ const ViewComplaint = (props) => {
     console.log("authToken");
     const type = "accept";
     axios
-      .get(`http://localhost:5000/complaint/updateComplaint/${id}/${type}`, {
+      .get(`https://complaint-center-backend.onrender.com/complaint/updateComplaint/${id}/${type}`, {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),
@@ -45,7 +45,7 @@ const ViewComplaint = (props) => {
   const handleReject = () => {
     // const id = "";
     axios
-      .get(`http://localhost:5000/complaint/updateComplaint/${id}/reject`, {
+      .get(`https://complaint-center-backend.onrender.com/complaint/updateComplaint/${id}/reject`, {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),
@@ -60,7 +60,7 @@ const ViewComplaint = (props) => {
   const handleEscalate = () => {
     // const id = "";
     axios
-      .get(`http://localhost:5000/complaint/updateComplaint/${id}/escalate`, {
+      .get(`https://complaint-center-backend.onrender.com/complaint/updateComplaint/${id}/escalate`, {
         headers: {
           "Content-Type": "application/json",
           authToken: localStorage.getItem("authToken"),
